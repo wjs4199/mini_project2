@@ -77,7 +77,14 @@ while (1){
         		if(deleteProduct(&p[num-1])) count--;
       		}
 	}
-    }
-	printf("종료됨!\n");
-	return 0;
+	else if(menu==5){
+     		if(count==0) printf("데이터가 없습니다!\n");
+      		else saveData(p,curcount);
+        }
+   	else if(menu==6){
+      		searchFunction(p, curcount);
+    	}
+   }
+   printf("종료됨!\n");
+   return 0;
 }
