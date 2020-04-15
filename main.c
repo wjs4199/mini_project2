@@ -78,10 +78,16 @@ while (1){
       		}
 	}
 	else if(menu==5){
+#ifdef DEBUG
+	printf("Debug[main.c]: 5. 제품저장 ->saveData()\n ");
+#endif
      		if(count==0) printf("데이터가 없습니다!\n");
       		else saveData(p,curcount);
         }
    	else if(menu==6){
+#ifdef DEBUG
+        printf("Debug[main.c]: 6. 제품검색 ->serachFunction()\n ");
+#endif
       		searchFunction(p, curcount);
     	}
    }
