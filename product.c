@@ -137,4 +137,21 @@ void searchName(Product*p, int count){
   if(scount==0) printf("=> 검색된 데이터 없음!");
   printf("\n");
 }
-
+//원하는 가격대의 제품을 찾아주는 함수
+void searchPrice(Product*p,int count){
+  //int scount=0;//데이터의 존재유무 가리는 변수
+  //int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고가격대
+  scount=0;
+  printf("원하는 가격한도?( ~ ) :");
+  scanf("%d~%d",&search1,&search2);
+  for(int i=0;i<count;i++){
+    if(p[i].weight !=-1)
+      if(p[i].price>=search1 && p[i].price<=search2){
+        printf("%2d ",i+1);
+        readProduct(&p[i]);
+        scount++;
+      }
+  }
+  if(scount==0) printf("=> 검색된 데이터 없음!");
+  printf("\n");  
+}
