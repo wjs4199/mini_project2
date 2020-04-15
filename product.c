@@ -119,3 +119,22 @@ int loadData(Product p[]){
   printf("=> 로딩 성공!\n");
   return count;
 }
+//이름 검색 기능하는 함수
+void searchName(Product*p, int count){
+  //int scount=0; //데이터의 존재유무 가리는 변수
+  //char search[20]; //사용자가 검색할 제품명
+  scount=0;
+  printf("검색할 제품명? ");
+  scanf("%s",search);
+  for(int i=0;i<count;i++){
+    if(p[i].weight !=-1)
+      if(strstr(p[i].name, search)){
+        printf("%2d ",i+1);
+        readProduct(&p[i]);
+        scount++;
+      }
+  }
+  if(scount==0) printf("=> 검색된 데이터 없음!");
+  printf("\n");
+}
+
