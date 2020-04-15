@@ -62,4 +62,13 @@ int deleteProduct(Product* p){
   printf("=> 삭제됨!\n");
   return 0;
 }
-
+//파일 데이터 저장하는 함수
+void saveData(Product* p, int count){
+  fp= fopen("product.txt","wt");
+  for(int i=0;i<count;i++){
+    if(p[i].weight !=-1)
+      fprintf(fp,"%s %d %d %d %d %d \n",p[i].name, p[i].weight,p[i].price, p[i].avg_price, p[i].star,p[i].review); 
+  }
+  fclose(fp);
+  printf("저장됨!");
+}
