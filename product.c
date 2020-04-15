@@ -155,3 +155,21 @@ void searchPrice(Product*p,int count){
   if(scount==0) printf("=> 검색된 데이터 없음!");
   printf("\n");  
 }
+//원하는 평점 이상의 제품을 찾아주는 함수
+void searchStar(Product*p,int count){
+  scount=0;//데이터의 존재유무 가리는 변수
+  //int search;//사용자가 원하는 평점
+  printf("원하는 평점? (0~5)");
+  scanf("%d",&starnum);
+  for(int i=0;i<count;i++){
+    if(p[i].weight !=-1)
+      if(p[i].star>=starnum){
+        printf("%2d ",i+1);
+        readProduct(&p[i]);
+        scount++;
+      }
+  }
+  if(scount==0) printf("=> 검색된 데이터 없음!");
+  printf("\n");  
+}
+
