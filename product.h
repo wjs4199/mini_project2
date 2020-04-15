@@ -42,9 +42,9 @@ int starnum;//사용자가 원하는ㄴ 평점
 
 /*Prototype*/
 //파일 데이터 저장하는 함수
-//void saveData(Product* p, int count);
+void saveData(Product* p, int count);
 //파일 데이터 불러오는 함수
-//int loadData(Product p[]);
+int loadData(Product p[]);
 //내용 추가하는 함수
 int creatProduct(Product *p);
 //리스트를 출력할때 데이터 1개의 내용
