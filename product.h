@@ -55,10 +55,10 @@ int updateProduct(Product *p);
 int deleteProduct(Product* p);
 
 //원하는 이름의 제품을 찾아주는 함수
-//void searchName(Product*p, int count);
+void searchName(Product*p, int count);
 //원하는 가격대의 제품을 찾아주는 함수
-//void searchPrice(Product*p,int count);
+void searchPrice(Product*p,int count);
 //원하는 평점 이상의 제품을 찾아주는 함수
-//void searchStar(Product*p,int count);
+void searchStar(Product*p,int count);
 //검색 기능을 총괄하는 함수
-//void searchFunction(Product*p,int count);
+void searchFunction(Product*p,int count);
