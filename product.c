@@ -72,3 +72,50 @@ void saveData(Product* p, int count){
   fclose(fp);
   printf("저장됨!");
 }
+//파일 데이터 불러오는 함수
+int loadData(Product p[]){
+  i=0;j=0;k=0;
+  count=0; check=0;
+  fp= fopen("product.txt","rt");
+  if(fp==NULL){
+    printf("=> 파일없음\n");
+    return 0;
+  }
+  while(1){
+    temp=fgetc(fp);
+    if(temp>='0' && temp<='9') check=1;
+    if(check==1){
+      if(temp==32||temp=='\n' || temp==EOF){
+        p[count].name[i]='\0';
+        str[j]='\0';
+        store[k++]=atoi(str);
+        if(temp==32){
+          j=0;
+        }
+        if(temp=='\n'){
+          p[count].weight=store[0];
+          p[count].price=store[1];
+          p[count].avg_price=store[2];
+          p[count].star=store[3];
+          p[count].review=store[4];
+          check=0;j=0;i=0;k=0;
+          count++;
+          continue;
+        }
+      }
+      else {
+        str[j++]=temp;
+      }
+    }
+    else {
+      p[count].name[i++]=temp;
+    }
+    if(feof(fp)){
+      p[count].weight=-1;
+      break;
+    }
+  }
+  fclose(fp);
+  printf("=> 로딩 성공!\n");
+  return count;
+}
