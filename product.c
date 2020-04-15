@@ -176,6 +176,7 @@ void searchStar(Product*p,int count){
 //검색 기능을 실행하는 함수
 void searchFunction(Product*p,int count){
   printf("=== 검색기능 ===\n1. 제품명 검색\n2. 제품가격대 검색\n3. 제품평점 검색\n0. 취소\n"); 
+	printf("원하는 메뉴번호는? :");
 	scanf("%d",&searchno);
   if(searchno==1) searchName(p,count);
   else if(searchno==2) searchPrice(p, count);
