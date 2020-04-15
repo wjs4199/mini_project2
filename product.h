@@ -39,7 +39,8 @@ int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고�
 
 //void searchStar(Product*p,int count)
 int starnum;//사용자가 원하는ㄴ 평점
-
+//void searchFunction(Product*p,int count)
+int no;
 /*Prototype*/
 //파일 데이터 저장하는 함수
 void saveData(Product* p, int count);
