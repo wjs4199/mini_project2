@@ -31,14 +31,14 @@ int no;//사용자가 원하는 번호를 입력
 int menu;//사용자가 입력할 메뉴번호
 
 //void searchName(Product*p, int count)
-//int scount; //데이터의 존재유무 가리는 변수
-//char search[20]; //사용자가 검색할 제품명
+int scount; //데이터의 존재유무 가리는 변수
+char search[20]; //사용자가 검색할 제품명
 
 //void searchPrice(Product*p,int count)
-//int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고가격대
+int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고가격대
 
 //void searchStar(Product*p,int count)
-//int starnum;//사용자가 원하는ㄴ 평점
+int starnum;//사용자가 원하는ㄴ 평점
 
 /*Prototype*/
 //파일 데이터 저장하는 함수
