@@ -31,8 +31,11 @@ Product p[100];// 구조체변수의 배열 p[100];// 구조체변수의 배열
 
 count=0, curcount=0;
 
+count=loadData(p);
+curcount=count;
 while (1){
 	menu = selectMenu();
+
 	if (menu == 0) break;
 	if (menu == 1){
 #ifdef DEBUG
