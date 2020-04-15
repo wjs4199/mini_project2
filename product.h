@@ -40,7 +40,7 @@ int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고�
 //void searchStar(Product*p,int count)
 int starnum;//사용자가 원하는ㄴ 평점
 //void searchFunction(Product*p,int count)
-int no;
+
 /*Prototype*/
 //파일 데이터 저장하는 함수
 void saveData(Product* p, int count);
@@ -54,7 +54,8 @@ void readProduct(Product* p);
 int updateProduct(Product *p);
 //내용을 삭제하는 함수
 int deleteProduct(Product* p);
-
+//원하는 번호를 입력하는 함수
+int selectDataNo(Product *p, int count);
 //원하는 이름의 제품을 찾아주는 함수
 void searchName(Product*p, int count);
 //원하는 가격대의 제품을 찾아주는 함수

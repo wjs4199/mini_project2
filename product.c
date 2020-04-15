@@ -62,6 +62,14 @@ int deleteProduct(Product* p){
   printf("=> 삭제됨!\n");
   return 0;
 }
+//원하는 번호를 입력하는 함수
+int selectDataNo(Product *p, int count){
+  //int no;
+  listProduct(p,count);
+  printf("번호는 (취소 :0)? ");
+  scanf("%d",&no);
+  return no;
+}
 //파일 데이터 저장하는 함수
 void saveData(Product* p, int count){
   fp= fopen("product.txt","wt");
