@@ -25,7 +25,6 @@ int store[5];//빈칸을 기준으로 atoi(str)한 값을 순차적으로 저장
 char* s;//평점 표시
 
 //int selectDataNo(Product *p, int count)+void searchFunction(Product*p,int count)
-int no;//사용자가 원하는 번호를 입력
 
 //int selectMenu()
 int menu;//사용자가 입력할 메뉴번호
@@ -40,7 +39,7 @@ int search1, search2;//사용자가 원하는 최저가격대/ 원하는 최고�
 //void searchStar(Product*p,int count)
 int starnum;//사용자가 원하는ㄴ 평점
 //void searchFunction(Product*p,int count)
-
+int searchno;
 /*Prototype*/
 //파일 데이터 저장하는 함수
 void saveData(Product* p, int count);

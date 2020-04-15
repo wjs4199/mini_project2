@@ -62,14 +62,6 @@ int deleteProduct(Product* p){
   printf("=> 삭제됨!\n");
   return 0;
 }
-//원하는 번호를 입력하는 함수
-int selectDataNo(Product *p, int count){
-  //int no;
-  listProduct(p,count);
-  printf("번호는 (취소 :0)? ");
-  scanf("%d",&no);
-  return no;
-}
 //파일 데이터 저장하는 함수
 void saveData(Product* p, int count){
   fp= fopen("product.txt","wt");
@@ -170,22 +162,23 @@ void searchStar(Product*p,int count){
   printf("원하는 평점? (0~5)");
   scanf("%d",&starnum);
   for(int i=0;i<count;i++){
-    if(p[i].weight !=-1)
+    if(p[i].weight !=-1){
       if(p[i].star>=starnum){
         printf("%2d ",i+1);
         readProduct(&p[i]);
         scount++;
       }
+    }
   }
   if(scount==0) printf("=> 검색된 데이터 없음!");
   printf("\n");  
 }
 //검색 기능을 실행하는 함수
 void searchFunction(Product*p,int count){
-  printf("=== 검색기능 ===\n1. 제품명 검색\n2. 제품가격대 검색\n3. 제품평점 검색\n0. 취소\n");
-  no= selectDataNo(p, count);
-  if(no==1) searchName(p,count);
-  else if(no==2) searchPrice(p, count);
-  else if(no==3) searchStar(p, count);
-  else if(no==0) printf("취소되었습니다!");
+  printf("=== 검색기능 ===\n1. 제품명 검색\n2. 제품가격대 검색\n3. 제품평점 검색\n0. 취소\n"); 
+	scanf("%d",&searchno);
+  if(searchno==1) searchName(p,count);
+  else if(searchno==2) searchPrice(p, count);
+  else if(searchno==3) searchStar(p, count);
+  else if(searchno==0) printf("취소되었습니다!");
 }
